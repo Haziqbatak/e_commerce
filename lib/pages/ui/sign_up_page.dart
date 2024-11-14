@@ -1,7 +1,7 @@
 part of '../pages.dart';
 
-class SplashScreenPage extends StatelessWidget {
-  const SplashScreenPage({super.key});
+class SignUpPage extends StatelessWidget {
+  const SignUpPage({super.key});
 
   @override
   Widget build(BuildContext context) {

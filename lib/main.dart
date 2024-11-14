@@ -20,6 +20,11 @@ class MyApp extends StatelessWidget {
       ),
       home: const SignInPage(),
       debugShowCheckedModeBanner: false,
+      routes: {
+        '/home' : (context) => HomePage(),
+        '/sign-in' : (context) => SignInPage(),
+        '/sign-up' : (context) => SignUpPage(),
+      },
     );
   }
 }
