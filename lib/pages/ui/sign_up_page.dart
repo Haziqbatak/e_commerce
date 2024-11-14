@@ -3,7 +3,7 @@ part of '../pages.dart';
 class SignUpPage extends StatelessWidget {
   const SignUpPage({super.key});
 
-Widget footer(BuildContext context) {
+  Widget footer(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Row(
@@ -14,9 +14,7 @@ Widget footer(BuildContext context) {
             style: subtitleTextStyle,
           ),
           GestureDetector(
-            onTap: () {
-              
-            },
+            onTap: () {},
             child: Text(
               'Sign Up',
               style: primaryTextStyle,
@@ -55,7 +53,7 @@ Widget footer(BuildContext context) {
     );
   }
 
-  Widget password(){
+  Widget password() {
     return Container(
       margin: EdgeInsets.only(
         top: 30,
@@ -111,7 +109,7 @@ Widget footer(BuildContext context) {
     );
   }
 
-  Widget email(){
+  Widget email() {
     return Container(
       margin: EdgeInsets.only(
         top: 30,
@@ -277,6 +275,33 @@ Widget footer(BuildContext context) {
   }
 
   @override
+  
+  Widget header() {
+    return Container(
+      margin: EdgeInsets.only(top: 20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Login',
+            style: primaryTextStyle.copyWith(
+              fontSize: 32,
+              fontWeight: semiBold,
+            ),
+          ),
+          SizedBox(
+            height: 12,
+          ),
+          Text(
+            'Sign In To Continue',
+            style:
+                subtitleTextStyle.copyWith(fontSize: 16, fontWeight: regular),
+          ),
+        ],
+      ),
+    );
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
@@ -286,6 +311,7 @@ Widget footer(BuildContext context) {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            header(),
             name(),
             username(),
             email(),
