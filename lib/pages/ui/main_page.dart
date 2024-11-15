@@ -30,10 +30,12 @@ class _MainPageState extends State<MainPage> {
       borderRadius: BorderRadius.vertical(
         top: Radius.circular(30),
       ),
-      clipBehavior: Clip.antiAlias,
       child: BottomAppBar(
-        shape: CircularNotchedRectangle(),
+        height: 80,
+        color: backgroundColor4,
         notchMargin: 12,
+        shape: CircularNotchedRectangle(),
+        clipBehavior: Clip.antiAlias,
         child: BottomNavigationBar(
           backgroundColor: backgroundColor4,
           type: BottomNavigationBarType.fixed,
@@ -49,28 +51,28 @@ class _MainPageState extends State<MainPage> {
             BottomNavigationBarItem(
               icon: Image.asset(
                 'assets/icon_home.png',
-                width: 24,
+                width: 21,
               ),
               label: '',
             ),
             BottomNavigationBarItem(
               icon: Image.asset(
                 'assets/icon_chat.png',
-                width: 24,
+                width: 20,
               ),
               label: '',
             ),
             BottomNavigationBarItem(
               icon: Image.asset(
                 'assets/icon_wishlist.png',
-                width: 24,
+                width: 20,
               ),
               label: '',
             ),
             BottomNavigationBarItem(
               icon: Image.asset(
                 'assets/icon_profile.png',
-                width: 24,
+                width: 18,
               ),
               label: '',
             ),
@@ -97,16 +99,10 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundColor1,
-      floatingActionButton: floatButton(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: customButtonNav(),
-      body: Center(
-        child: Text(
-          'Main Page',
-          style: primaryTextStyle,
-        ),
-      ),
-    );
+        backgroundColor: backgroundColor1,
+        floatingActionButton: floatButton(),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        bottomNavigationBar: customButtonNav(),
+        body: body());
   }
 }
