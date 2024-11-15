@@ -37,6 +37,9 @@ class _MainPageState extends State<MainPage> {
         child: BottomNavigationBar(
           backgroundColor: backgroundColor4,
           type: BottomNavigationBarType.fixed,
+          elevation: 0,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
           onTap: (value) {
             setState(() {
               currentIndex = value;
