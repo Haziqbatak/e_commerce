@@ -12,9 +12,12 @@ class HomePage extends StatelessWidget {
         ),
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
-          child: Text(
-            'DATA POPULAR PRODUCT',
-            style: primaryTextStyle,
+          child: Row(
+            children: [
+              ProductCart(),
+              ProductCart(),
+              ProductCart(),
+            ],
           ),
         ),
       );
