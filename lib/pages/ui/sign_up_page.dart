@@ -55,7 +55,7 @@ class SignUpPage extends StatelessWidget {
 
   Widget password() {
     return Container(
-      margin: EdgeInsets.only(
+      margin: const EdgeInsets.only(
         top: 30,
       ),
       child: Column(
@@ -111,7 +111,7 @@ class SignUpPage extends StatelessWidget {
 
   Widget email() {
     return Container(
-      margin: EdgeInsets.only(
+      margin: const EdgeInsets.only(
         top: 30,
       ),
       child: Column(
@@ -166,7 +166,7 @@ class SignUpPage extends StatelessWidget {
 
   Widget username() {
     return Container(
-      margin: EdgeInsets.only(
+      margin: const EdgeInsets.only(
         top: 30,
       ),
       child: Column(
@@ -221,7 +221,7 @@ class SignUpPage extends StatelessWidget {
 
   Widget name() {
     return Container(
-      margin: EdgeInsets.only(
+      margin: const EdgeInsets.only(
         top: 30,
       ),
       child: Column(
@@ -278,7 +278,7 @@ class SignUpPage extends StatelessWidget {
   
   Widget header() {
     return Container(
-      margin: EdgeInsets.only(top: 20),
+      margin: const EdgeInsets.only(top: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -289,7 +289,7 @@ class SignUpPage extends StatelessWidget {
               fontWeight: semiBold,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 12,
           ),
           Text(
@@ -302,6 +302,7 @@ class SignUpPage extends StatelessWidget {
     );
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,

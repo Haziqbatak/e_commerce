@@ -57,7 +57,7 @@ class SignInPage extends StatelessWidget {
 
   Widget passwordInput() {
     return Container(
-      margin: EdgeInsets.only(
+      margin: const EdgeInsets.only(
         top: 30,
       ),
       child: Column(
@@ -113,7 +113,7 @@ class SignInPage extends StatelessWidget {
 
   Widget emailInput() {
     return Container(
-      margin: EdgeInsets.only(
+      margin: const EdgeInsets.only(
         top: 30,
       ),
       child: Column(
@@ -169,7 +169,7 @@ class SignInPage extends StatelessWidget {
   @override
   Widget header() {
     return Container(
-      margin: EdgeInsets.only(top: 20),
+      margin: const EdgeInsets.only(top: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -180,7 +180,7 @@ class SignInPage extends StatelessWidget {
               fontWeight: semiBold,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 12,
           ),
           Text(
@@ -193,6 +193,7 @@ class SignInPage extends StatelessWidget {
     );
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,

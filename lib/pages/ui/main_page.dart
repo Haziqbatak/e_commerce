@@ -13,28 +13,28 @@ class _MainPageState extends State<MainPage> {
   Widget body() {
     switch (currentIndex) {
       case 0:
-        return HomePage();
+        return const HomePage();
       case 1:
-        return ChatPage();
+        return const ChatPage();
       case 2:
-        return WishListPage();
+        return const WishListPage();
       case 3:
-        return ProfilePage();
+        return const ProfilePage();
       default:
-        return HomePage();
+        return const HomePage();
     }
   }
 
   Widget customButtonNav() {
     return ClipRRect(
-      borderRadius: BorderRadius.vertical(
+      borderRadius: const BorderRadius.vertical(
         top: Radius.circular(30),
       ),
       child: BottomAppBar(
         height: 80,
         color: backgroundColor4,
         notchMargin: 12,
-        shape: CircularNotchedRectangle(),
+        shape: const CircularNotchedRectangle(),
         clipBehavior: Clip.antiAlias,
         child: BottomNavigationBar(
           backgroundColor: backgroundColor4,

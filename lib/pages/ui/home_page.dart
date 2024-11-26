@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
         margin: EdgeInsets.symmetric(
           horizontal: defaultMargin,
         ),
-        child: SingleChildScrollView(
+        child: const SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
@@ -50,7 +50,7 @@ class HomePage extends StatelessWidget {
           child: Row(
             children: [
               Container(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     vertical: 10,
                     horizontal: 20,
                   ),
@@ -69,7 +69,7 @@ class HomePage extends StatelessWidget {
                 width: 20,
               ),
               Container(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   vertical: 10,
                   horizontal: 20,
                 ),
@@ -87,7 +87,7 @@ class HomePage extends StatelessWidget {
                 width: 20,
               ),
               Container(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   vertical: 10,
                   horizontal: 20,
                 ),
@@ -105,7 +105,7 @@ class HomePage extends StatelessWidget {
                 width: 20,
               ),
               Container(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   vertical: 10,
                   horizontal: 20,
                 ),
@@ -163,7 +163,7 @@ class HomePage extends StatelessWidget {
             Container(
               width: 60,
               height: 60,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
                   image: AssetImage(
@@ -182,15 +182,15 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: [
           header(),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           category(),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           popularProduct(),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
         ],

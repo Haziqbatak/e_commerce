@@ -24,7 +24,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
         child: Container(
           width: double.infinity,
           height: 250,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage('assets/image_splash.png'),
             ),
