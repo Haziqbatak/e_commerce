@@ -4,3 +4,4 @@ import 'package:intl/intl.dart';
 
 part 'product_card.dart';
 part 'product_title.dart';
+part 'chat_card.dart';

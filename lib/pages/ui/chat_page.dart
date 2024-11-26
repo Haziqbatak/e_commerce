@@ -5,6 +5,26 @@ class ChatPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Widget messageEmpty() {
+      return Center(
+        child: Expanded(
+          child: Text('Message is Empty'),
+        ),
+      );
+    }
+
+    Widget message() {
+      return Column(
+        children: [
+          ChatCard(),
+          ChatCard(),
+          ChatCard(),
+          ChatCard(),
+          ChatCard(),
+        ],
+      );
+    }
+
     Widget header() {
       return AppBar(
         backgroundColor: backgroundColor2,
@@ -24,6 +44,7 @@ class ChatPage extends StatelessWidget {
       body: ListView(
         children: [
           header(),
+          message(),
         ],
       ),
     );
