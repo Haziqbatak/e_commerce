@@ -13,6 +13,11 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             ProductTitle(),
+            ProductTitle(),
+            ProductTitle(),
+            ProductTitle(),
+            ProductTitle(),
+            ProductTitle(),
           ],
         ),
       );
@@ -42,9 +47,9 @@ class HomePage extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-              ProductCart(),
-              ProductCart(),
-              ProductCart(),
+              ProductCard(),
+              ProductCard(),
+              ProductCard(),
             ],
           ),
         ),
@@ -220,13 +225,7 @@ class HomePage extends StatelessWidget {
             height: 15,
           ),
           newArrivalTitle(),
-          const SizedBox(
-            height: 15,
-          ),
           newArrivalProduct(),
-          const SizedBox(
-            height: 15,
-          ),
         ],
       ),
     );
