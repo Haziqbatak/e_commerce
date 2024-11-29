@@ -5,36 +5,41 @@ class ChatCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(
-        left: 15,
-        top: 15,
+    return Container(
+      margin: EdgeInsets.only(
+        bottom: 10,
       ),
-      child: Row(
-        children: [
-          Image.asset(
-            'assets/icon_headset.png',
-            width: 50,
-          ),
-          SizedBox(
-            width: 10,
-          ),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Customer Services',
-                  style: primaryTextStyle,
-                ),
-                Text(
-                  'Online',
-                  style: primaryTextStyle,
-                )
-              ],
+      child: Padding(
+        padding: const EdgeInsets.only(
+          left: 15,
+          top: 15,
+        ),
+        child: Row(
+          children: [
+            Image.asset(
+              'assets/icon_headset.png',
+              width: 50,
             ),
-          ),
-        ],
+            SizedBox(
+              width: 10,
+            ),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Customer Services',
+                    style: primaryTextStyle,
+                  ),
+                  Text(
+                    'Online',
+                    style: primaryTextStyle,
+                  )
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
