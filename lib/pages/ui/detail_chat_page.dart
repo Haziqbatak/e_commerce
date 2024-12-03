@@ -8,6 +8,15 @@ class DetailChatPage extends StatelessWidget {
     PreferredSizeWidget header() {
       return AppBar(
         backgroundColor: backgroundColor1,
+        centerTitle: false,
+        title: Row(
+          children: [
+            Image.asset(
+              'assets/image_shop_logo_online.png',
+              width: 50,
+            ),
+          ],
+        ),
       );
     }
 
