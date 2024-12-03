@@ -12,10 +12,32 @@ class DetailChatPage extends StatelessWidget {
           vertical: 12,
         ),
         children: [
-          ChatBuble(),
-          ChatBuble(),
-          ChatBuble(),
-          ChatBuble(),
+          ChatBuble(
+            text: 'Hi, this item is still available?',
+            isSender: true,
+            hasProduct: true,
+          ),
+          ChatBuble(
+            text: 'Hi, is this item still available?',
+            isSender: false,
+            hasProduct: false,
+          ),
+          ChatBuble(
+            text: 'How about the size?',
+            isSender: true,
+          ),
+          ChatBuble(
+            text: 'It\'s avalable in A2 and A3?',
+            isSender: false,
+          ),
+          ChatBuble(
+            text: 'Okk, i\'ll take A2',
+            isSender: false,
+          ),
+          ChatBuble(
+            text: 'Sure, please wait a momment',
+            isSender: false,
+          ),
         ],
       );
     }
