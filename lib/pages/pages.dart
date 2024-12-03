@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:e_commerce/pages/ui/widget/widget.dart';
 import 'package:e_commerce/shared/shared.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 part 'ui/home_page.dart';
 part 'ui/sign_in_page.dart';

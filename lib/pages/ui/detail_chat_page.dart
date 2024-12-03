@@ -5,13 +5,75 @@ class DetailChatPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
+    Widget content() {
+      return ListView(
+        children: [
+          ChatBuble(),
+          ChatBuble(),
+          ChatBuble(),
+          ChatBuble(),
+        ],
+      );
+    }
+
     Widget productPreview() {
       return Container(
         width: 230,
+        padding: EdgeInsets.all(15),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: backgroundColor5,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(15),
+                  child: Image.asset(
+                    'assets/image_shoes.png',
+                    width: 64,
+                  ),
+                ),
+                SizedBox(
+                  width: 12,
+                ),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Shoes Arei V.2.0',
+                        style: primaryTextStyle,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      Text(
+                        NumberFormat.currency(
+                                locale: 'id-ID',
+                                decimalDigits: 0,
+                                symbol: 'IDR')
+                            .format(75000),
+                        style: priceTextStyle.copyWith(
+                          color: Colors.white,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  width: 12,
+                ),
+                Image.asset(
+                  'assets/button_close.png',
+                  width: 22,
+                ),
+              ],
+            ),
+          ],
         ),
       );
     }
@@ -25,14 +87,13 @@ class DetailChatPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
+            productPreview(),
             Column(
               mainAxisSize: MainAxisSize.min,
               children: [
                 Container(
                   height: 45,
-                  margin: EdgeInsets.all(
-                    12,
-                  ),
+                  margin: EdgeInsets.symmetric(vertical: 12),
                   padding: EdgeInsets.fromLTRB(0, 0, 5, 0),
                   decoration: BoxDecoration(
                     color: backgroundColor2,
@@ -116,6 +177,7 @@ class DetailChatPage extends StatelessWidget {
       backgroundColor: backgroundColor3,
       appBar: header(),
       bottomNavigationBar: chatInput(),
+      body: content(),
     );
   }
 }
