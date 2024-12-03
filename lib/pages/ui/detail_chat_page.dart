@@ -5,6 +5,15 @@ class DetailChatPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    PreferredSizeWidget header() {
+      return AppBar(
+        backgroundColor: backgroundColor1,
+      );
+    }
+
+    return Scaffold(
+      backgroundColor: backgroundColor3,
+      appBar: header(),
+    );
   }
 }
