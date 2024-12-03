@@ -108,9 +108,24 @@ class ChatBuble extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           productPreview(),
-          Text(
-            'Any Help ?',
-            style: primaryTextStyle,
+          Flexible(
+            child: Container(
+              constraints: BoxConstraints(
+                  maxWidth: MediaQuery.of(context).size.width * 0.0),
+              decoration: BoxDecoration(
+                color: backgroundColor5,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20),
+                  topRight: Radius.circular(0),
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20),
+                ),
+              ),
+              child: Text(
+                'Any Help ?',
+                style: primaryTextStyle,
+              ),
+            ),
           ),
         ],
       ),
