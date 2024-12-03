@@ -15,6 +15,22 @@ class DetailChatPage extends StatelessWidget {
               'assets/image_shop_logo_online.png',
               width: 50,
             ),
+            SizedBox(
+              width: 12,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Shoes Shop',
+                  style: primaryTextStyle,
+                ),
+                Text(
+                  'Online',
+                  style: primaryTextStyle,
+                ),
+              ],
+            ),
           ],
         ),
       );
