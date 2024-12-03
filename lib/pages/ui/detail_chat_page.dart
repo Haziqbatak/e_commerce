@@ -5,6 +5,11 @@ class DetailChatPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
+    Widget chatInput() {
+      return Container();
+    }
+
     PreferredSizeWidget header() {
       return AppBar(
         backgroundColor: backgroundColor1,
@@ -50,6 +55,7 @@ class DetailChatPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: backgroundColor3,
       appBar: header(),
+      bottomNavigationBar: chatInput(),
     );
   }
 }
