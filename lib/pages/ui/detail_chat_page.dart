@@ -27,12 +27,23 @@ class DetailChatPage extends StatelessWidget {
                 ),
                 Text(
                   'Online',
-                  style: primaryTextStyle,
+                  style: primaryTextStyle.copyWith(
+                    fontWeight: light,
+                    fontSize: 15,
+                  ),
                 ),
               ],
             ),
           ],
         ),
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back,
+              color: primaryTextColor,
+            )),
       );
     }
 
