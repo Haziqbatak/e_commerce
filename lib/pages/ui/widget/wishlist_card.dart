@@ -23,9 +23,34 @@ class WishlistCard extends StatelessWidget {
             ),
           ),
           SizedBox(width: 12),
-          Text(
-            'ini adalah widsh list card',
-            style: primaryTextStyle,
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Arai Shoes V.2.0 - black',
+                  style: primaryTextStyle,
+                ),
+                Text(
+                  NumberFormat.currency(
+                    locale: 'id-ID',
+                    decimalDigits: 0,
+                    symbol: 'IDR',
+                  ).format(75000),
+                  style: priceTextStyle,
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            width: 12,
+          ),
+          GestureDetector(
+            onTap: (){},
+            child: Image.asset(
+              'assets/button_wishList_blue.png',
+              width: 24,
+            ),
           ),
         ],
       ),
