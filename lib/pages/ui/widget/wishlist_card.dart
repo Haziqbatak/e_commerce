@@ -14,9 +14,20 @@ class WishlistCard extends StatelessWidget {
         color: backgroundColor3,
         borderRadius: BorderRadius.circular(15),
       ),
-      child: Text(
-        'ini adalah widsh list card',
-        style: primaryTextStyle,
+      child: Row(
+        children: [
+          ClipRRect(
+            child: Image.asset(
+              'assets/image_shoes.png',
+              width: 64,
+            ),
+          ),
+          SizedBox(width: 12),
+          Text(
+            'ini adalah widsh list card',
+            style: primaryTextStyle,
+          ),
+        ],
       ),
     );
   }
