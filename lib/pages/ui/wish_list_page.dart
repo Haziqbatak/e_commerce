@@ -18,6 +18,18 @@ class WishListPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Widget content() {
+      return Expanded(
+        child: ListView(
+          children: [
+            WishlistCard(),
+            WishlistCard(),
+            WishlistCard(),
+          ],
+        ),
+      );
+    }
+
     Widget emptyWishList() {
       return Expanded(
         child: Column(
@@ -41,9 +53,17 @@ class WishListPage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             OutlinedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(
+                  (context),
+                  '/main',
+                );
+              },
               child: Text(
                 'Explore Store',
+                style: primaryTextStyle.copyWith(
+                  fontWeight: light,
+                ),
               ),
               style: OutlinedButton.styleFrom(
                 padding: EdgeInsets.symmetric(
@@ -61,7 +81,10 @@ class WishListPage extends StatelessWidget {
     }
 
     return Column(
-      children: [header(), emptyWishList()],
+      children: [
+        header(),
+        WishlistCard(),
+      ],
     );
   }
 }
