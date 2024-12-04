@@ -5,13 +5,33 @@ class WishListPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Widget emptyWishList() {
+      return Expanded(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/image_wishList.png',
+              width: 100,
+            ),
+          ],
+        ),
+      );
+    }
+
     PreferredSizeWidget header() {
       return AppBar(
         backgroundColor: backgroundColor1,
+        centerTitle: true,
         title: Text(
           'Wishlist page',
-          style: primaryTextStyle,
+          style: primaryTextStyle.copyWith(
+            fontSize: 18,
+            fontWeight: medium,
+          ),
         ),
+        elevation: 0,
+        automaticallyImplyLeading: false,
       );
     }
 
