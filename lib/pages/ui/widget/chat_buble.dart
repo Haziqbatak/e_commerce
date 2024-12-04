@@ -117,6 +117,7 @@ class ChatBuble extends StatelessWidget {
         crossAxisAlignment:
             isSender ? CrossAxisAlignment.end : CrossAxisAlignment.start,
         children: [
+          hasProduct ? productPreview() : SizedBox(),
           Flexible(
             child: Container(
               constraints: BoxConstraints(
