@@ -5,14 +5,47 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: backgroundColor1,
-      body: Center(
-        child: Text(
-          'Profile Page',
+    Widget menuItem() {
+      return Row(
+        children: [
+          Text(
+            'Profile',
+            style: primaryTextStyle,
+          )
+        ],
+      );
+    }
+
+    Widget content() {
+      return Expanded(
+        child: Column(
+          children: [
+            menuItem(),
+            menuItem(),
+            menuItem(),
+          ],
+        ),
+      );
+    }
+
+    PreferredSizeWidget header() {
+      return AppBar(
+        backgroundColor: backgroundColor1,
+        title: Text(
+          'Profile',
           style: primaryTextStyle,
         ),
-      ),
+        centerTitle: true,
+        elevation: 0,
+        automaticallyImplyLeading: false,
+      );
+    }
+
+    return Column(
+      children: [
+        header(),
+        content(),
+      ],
     );
   }
 }
