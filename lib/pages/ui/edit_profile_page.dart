@@ -5,6 +5,51 @@ class EditProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    Widget content() {
+      return Container(
+        width: double.infinity,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            CircleAvatar(
+              radius: 64,
+              backgroundImage: AssetImage(
+                'assets/image_profile.png',
+              ),
+            ),
+            Text(
+              'Haziq',
+              style: primaryTextStyle,
+            )
+          ],
+        ),
+      );
+    }
+
+    PreferredSizeWidget header() {
+      return AppBar(
+        backgroundColor: backgroundColor1,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios),
+          color: Colors.white,
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        title: Text(
+          'Edit Profile',
+          style: primaryTextStyle.copyWith(
+            fontWeight: semiBold,
+            fontSize: 20,
+          ),
+        ),
+      );
+    }
+
+    return Scaffold(
+      backgroundColor: backgroundColor2,
+      appBar: header(),
+      body: content(),
+    );
   }
 }
