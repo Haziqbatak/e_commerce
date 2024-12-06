@@ -43,46 +43,73 @@ class ProfilePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Row(
+                children: [
+                  CircleAvatar(
+                    radius: 40,
+                    backgroundImage: AssetImage('assets/image_profile.png'),
+                  ),
+                  SizedBox(
+                    width: 12,
+                  ),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Kina Mekoichi',
+                          style: primaryTextStyle.copyWith(
+                              fontSize: 20, fontWeight: semiBold),
+                        ),
+                        Text(
+                          'kinamekoichi@gmail.com',
+                          style: primaryTextStyle.copyWith(
+                            fontSize: 16,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Icon(
+                      Icons.exit_to_app,
+                      color: Colors.red,
+                      size: 34,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
               Text(
-                'account',
+                'Account',
                 style: primaryTextStyle.copyWith(
-                  fontSize: 16,
-                  fontWeight: semiBold,
-                ),
+                    fontSize: 16, fontWeight: semiBold),
               ),
               GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(
-                    (context),
-                    '/edit-profile',
-                  );
-                },
-                child: menuItem('Edit Profile'),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/edit-profile');
+                  },
+                  child: menuItem('Edit Profile')),
+              GestureDetector(onTap: () {}, child: menuItem('Your Orders')),
+              GestureDetector(onTap: () {}, child: menuItem('Help')),
+              SizedBox(
+                height: 20,
               ),
-              GestureDetector(
-                onTap: () {},
-                child: menuItem('Your order'),
-              ),
-              GestureDetector(
-                onTap: () {},
-                child: menuItem('Help'),
-              ),
-              SizedBox(height: 20),
+              
               Text(
-                'general',
+                'General',
                 style: primaryTextStyle.copyWith(
-                  fontSize: 16,
-                  fontWeight: semiBold,
-                ),
+                    fontSize: 16, fontWeight: semiBold),
               ),
               GestureDetector(
-                onTap: () {},
-                child: menuItem('Regulacy & term of service'),
-              ),
+                  onTap: () {}, child: menuItem('Privacy & Policy')),
               GestureDetector(
-                onTap: () {},
-                child: menuItem('rate App'),
-              ),
+                  onTap: () {}, child: menuItem('Terms of Service')),
+              GestureDetector(onTap: () {}, child: menuItem('Rate App')),
+              GestureDetector(onTap: () {}, child: menuItem('Help Center')),
             ],
           ),
         ),

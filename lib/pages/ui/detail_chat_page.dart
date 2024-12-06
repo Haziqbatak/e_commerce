@@ -7,7 +7,7 @@ class DetailChatPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget content() {
       return ListView(
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           horizontal: 20,
           vertical: 12,
         ),
