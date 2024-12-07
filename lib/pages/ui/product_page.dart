@@ -8,6 +8,17 @@ class ProductPage extends StatefulWidget {
 }
 
 class _ProductPageState extends State<ProductPage> {
+  List<String> suggestionProduct = [
+    'asssets/image_shoes.png',
+    'asssets/image_shoes2.png',
+    'asssets/image_shoes3.png',
+    'asssets/image_shoes4.png',
+    'asssets/image_shoes5.png',
+    'asssets/image_shoes6.png',
+    'asssets/image_shoes7.png',
+    'asssets/image_shoes8.png',
+  ];
+
   int currentIndex = 0;
 
   List imagesProduct = [
@@ -67,6 +78,216 @@ class _ProductPageState extends State<ProductPage> {
                   ),
                 ),
               ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              'Description',
+              style: primaryTextStyle.copyWith(
+                fontSize: 16,
+                fontWeight: semiBold,
+              ),
+            ),
+            SizedBox(height: 10),
+            Text(
+              'Lorem ipsum sit dolor ametLorem ipsum sit dolor ametLorem ipsum sit, dolor ametLorem ipsum sit dolor ametLorem ipsum,'
+              ' sit dolor ametLorem ipsum sit dolor ametLorem ipsum sit dolor ametLorem ipsum sit dolor amet',
+              style: primaryTextStyle.copyWith(
+                  fontSize: 14, fontWeight: regular, letterSpacing: 0.5),
+              textAlign: TextAlign.justify,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              'Color',
+              style: primaryTextStyle.copyWith(
+                fontSize: 16,
+                fontWeight: semiBold,
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Container(
+                    width: 50,
+                    height: 50,
+                    margin: EdgeInsets.only(right: 16),
+                    decoration: BoxDecoration(
+                        color: Colors.amber,
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(
+                          color: Colors.white,
+                        )),
+                  ),
+                  Container(
+                    width: 50,
+                    height: 50,
+                    margin: EdgeInsets.only(right: 16),
+                    decoration: BoxDecoration(
+                        color: Colors.amber,
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(
+                          color: Colors.white,
+                        )),
+                  ),
+                  Container(
+                    width: 50,
+                    height: 50,
+                    margin: EdgeInsets.only(right: 16),
+                    decoration: BoxDecoration(
+                        color: Colors.amber,
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(
+                          color: Colors.white,
+                        )),
+                  ),
+                  Container(
+                    width: 50,
+                    height: 50,
+                    margin: EdgeInsets.only(right: 16),
+                    decoration: BoxDecoration(
+                        color: Colors.amber,
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(
+                          color: Colors.white,
+                        )),
+                  ),
+                  Container(
+                    width: 50,
+                    height: 50,
+                    margin: EdgeInsets.only(right: 16),
+                    decoration: BoxDecoration(
+                        color: Colors.amber,
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(
+                          color: Colors.white,
+                        )),
+                  ),
+                  Container(
+                    width: 50,
+                    height: 50,
+                    margin: EdgeInsets.only(right: 16),
+                    decoration: BoxDecoration(
+                        color: Colors.amber,
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(
+                          color: Colors.white,
+                        )),
+                  ),
+                  SizedBox(width: 10),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              'Color',
+              style: primaryTextStyle.copyWith(
+                fontSize: 16,
+                fontWeight: semiBold,
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Container(
+                    width: 50,
+                    height: 50,
+                    margin: EdgeInsets.only(right: 16),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(
+                        color: Colors.white,
+                      ),
+                    ),
+                    child: Center(
+                      child: Text(
+                        '39',
+                        style: primaryTextStyle.copyWith(
+                          fontSize: 16,
+                          fontWeight: semiBold,
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                ],
+              ),
+            ),
+            SizedBox(height: 20),
+            Text(
+              'Sugestion',
+              style: primaryTextStyle.copyWith(
+                fontSize: 16,
+                fontWeight: semiBold,
+              ),
+            ),
+            SizedBox(height: 10),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: suggestionProduct.map((e) {
+                  return Container(
+                    width: 150,
+                    height: 150,
+                    margin: EdgeInsets.only(right: 16),
+                    decoration: BoxDecoration(
+                      color: backgroundColor5,
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Column(
+                      children: [
+                        Container(
+                          width: 150,
+                          height: 70,
+                          decoration: BoxDecoration(
+                            color: backgroundColor5,
+                            borderRadius: BorderRadius.vertical(
+                              top: Radius.circular(8),
+                            ),
+                            image: DecorationImage(
+                              image: AssetImage(e),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          'Shoes Arai V.2.0 - No Limit',
+                          style: primaryTextStyle.copyWith(
+                            fontSize: 10,
+                            fontWeight: semiBold,
+                            color: priceColor,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                        ),
+                        Text(
+                          NumberFormat.currency(
+                                  locale: 'id-ID',
+                                  decimalDigits: 0,
+                                  symbol: 'IDR')
+                              .format(75000),
+                          style: priceTextStyle.copyWith(
+                            fontSize: 18,
+                            fontWeight: semiBold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                }).toList(),
+              ),
             ),
           ],
         ),
