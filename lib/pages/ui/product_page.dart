@@ -18,6 +18,61 @@ class _ProductPageState extends State<ProductPage> {
 
   @override
   Widget build(BuildContext context) {
+    Widget content() {
+      return Container(
+        margin: EdgeInsets.only(top: 20),
+        padding: EdgeInsets.all(20),
+        decoration: BoxDecoration(
+          color: backgroundColor1,
+          borderRadius: BorderRadius.vertical(
+            top: Radius.circular(20),
+          ),
+        ),
+        child: Column(
+          children: [
+            Text(
+              'Shoes Arai V.2.0 - No Limit',
+              style: primaryTextStyle.copyWith(
+                fontSize: 18,
+                fontWeight: semiBold,
+              ),
+            ),
+            Text(
+              'Mountain - Hiking',
+              style: primaryTextStyle.copyWith(
+                fontSize: 16,
+                fontWeight: regular,
+              ),
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  NumberFormat.currency(
+                          locale: 'id-ID', decimalDigits: 0, symbol: 'IDR')
+                      .format(75000),
+                  style: priceTextStyle.copyWith(
+                    fontSize: 18,
+                    fontWeight: semiBold,
+                  ),
+                ),
+                Container(
+                  width: 30,
+                  height: 30,
+                  decoration: BoxDecoration(color: backgroundColor3),
+                  child: Icon(
+                    Icons.favorite,
+                    color: primaryColor,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      );
+    }
+
     Widget indicatorBar(int index) {
       return Container(
         height: 10,
@@ -26,14 +81,11 @@ class _ProductPageState extends State<ProductPage> {
           horizontal: 2,
         ),
         decoration: BoxDecoration(
-          color: currentIndex == index ? priceColor : Colors.white,
-          borderRadius: currentIndex == index 
-          ? BorderRadius.circular(10)
-          : BorderRadius.circular(5),
-          border: Border.all(
-            color: priceColor
-          )
-        ),
+            color: currentIndex == index ? priceColor : Colors.white,
+            borderRadius: currentIndex == index
+                ? BorderRadius.circular(10)
+                : BorderRadius.circular(5),
+            border: Border.all(color: priceColor)),
       );
     }
 
@@ -89,7 +141,6 @@ class _ProductPageState extends State<ProductPage> {
               autoPlay: true,
               enlargeCenterPage: true,
               autoPlayInterval: Duration(seconds: 3),
-              
               onPageChanged: (index, reason) {
                 setState(() {
                   currentIndex = index;
@@ -103,7 +154,7 @@ class _ProductPageState extends State<ProductPage> {
               Row(
                 children: [
                   for (var i = 0; i < imagesProduct.length; i++)
-                  indicatorBar(i),
+                    indicatorBar(i),
                 ],
               )
             ],
